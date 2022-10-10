@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}Time registering{% endblock %} {%
+block content %}
+<h1 align="center">Time registering</h1>
+
+<form method="POST">
+  <label for="birthday">Birthday:</label>
+  <input type="datetime-local" id="birthday" name="birthday" />
+  <textarea name="note" id="note" class="form-control"></textarea>
+  <br />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Add Note</button>
+  </div>
+</form>
+
+{% endblock %}
