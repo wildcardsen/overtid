@@ -11,6 +11,13 @@ views = Blueprint('views', __name__)
 @views.route('/', methods=['GET', 'POST'])
 @login_required
 def home():
+
+    return render_template("home.html", user=current_user)
+
+
+@views.route('/time', methods=['GET', 'POST'])
+@login_required
+def time():
     if request.method == 'POST':
 
         start_dato = request.form.get('start-dato')
@@ -23,12 +30,6 @@ def home():
         db.session.add(new_time)
         db.session.commit()
 
-    return render_template("home.html", user=current_user)
-
-
-@views.route('/time', methods=['GET', 'POST'])
-@login_required
-def time():
     return render_template("time.html", user=current_user)
 
 
