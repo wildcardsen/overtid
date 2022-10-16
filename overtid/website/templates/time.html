@@ -3,10 +3,53 @@ block content %}
 <h1 align="center">Time registering</h1>
 
 <form method="POST">
-  <label for="birthday">Start tid:</label>
-  <input type="datetime-local" id="start-dato" name="start-dato" />
-  <label for="birthday">Slutt tid:</label>
-  <input type="datetime-local" id="end-dato" name="end-dato" />
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Start dato</span>
+    </div>
+    <input
+      type="datetime-local"
+      class="form-control"
+      id="start-dato"
+      name="start-dato"
+    />
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Slutt dato</span>
+    </div>
+    <input
+      type="datetime-local"
+      class="form-control"
+      id="end-dato"
+      name="end-dato"
+    />
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="defaultCheck1"
+    />
+    <label class="form-check-label" for="defaultCheck1"> Prosjekt </label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="defaultCheck2"
+      disabled
+    />
+    <label class="form-check-label" for="defaultCheck2"> Overtid </label>
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Grunnlag:</span>
+    </div>
+    <textarea class="form-control" aria-label="With textarea"></textarea>
+  </div>
   <div align="center">
     <button type="submit" class="btn btn-primary">Lagre time</button>
   </div>
