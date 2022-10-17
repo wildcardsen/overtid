@@ -25,24 +25,44 @@ block content %}
       name="end-dato"
     />
   </div>
-  <div class="form-check">
+
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Prosjket</label>
+  <select
+    class="custom-select my-1 mr-sm-2"
+    id="project_type"
+    name="project_type"
+  >
+    <option selected>Velg et allternativ..</option>
+    <option value="1">Ingen prosjekt</option>
+    <option value="2">Sykehjem</option>
+    <option value="3">Liland Barnehage</option>
+  </select>
+  <div class="custom-control custom-checkbox my-1 mr-sm-2">
     <input
-      class="form-check-input"
       type="checkbox"
-      value=""
-      id="defaultCheck1"
+      class="custom-control-input"
+      id="customControlInline"
     />
-    <label class="form-check-label" for="defaultCheck1"> Prosjekt </label>
+    <label class="custom-control-label" for="customControlInline"
+      >Husk mitt valg</label
+    >
   </div>
-  <div class="form-check">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Overtid</label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+    <option selected>Velg et allternativ..</option>
+    <option value="1">Utløser overtid</option>
+    <option value="2">Prosjekt</option>
+    <option value="3">Ingen konsekvenser</option>
+  </select>
+  <div class="custom-control custom-checkbox my-1 mr-sm-2">
     <input
-      class="form-check-input"
       type="checkbox"
-      value=""
-      id="defaultCheck2"
-      disabled
+      class="custom-control-input"
+      id="customControlInline"
     />
-    <label class="form-check-label" for="defaultCheck2"> Overtid </label>
+    <label class="custom-control-label" for="customControlInline"
+      >Husk mitt valg</label
+    >
   </div>
   <div class="input-group">
     <div class="input-group-prepend">

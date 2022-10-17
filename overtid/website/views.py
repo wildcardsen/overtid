@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
 from datetime import datetime
-from .models import Note, User, User_time
+from .models import Note, User, UserTime
 from . import db
 import json
 
@@ -22,11 +22,12 @@ def time():
 
         start_dato = request.form.get('start-dato')
         end_dato = request.form.get('end-dato')
+        pt = request.form.get('project_type')
         format = "%Y-%m-%dT%H:%M"
         sd = datetime.strptime(start_dato, format)
         ed = datetime.strptime(end_dato, format)
-        new_time = User_time(start_time=sd, end_time=ed,
-                             user_id=current_user.id)
+        new_time = UserTime(start_time=sd, end_time=ed,
+                            project_type=pt, user_id=current_user.id)
         db.session.add(new_time)
         db.session.commit()
 
